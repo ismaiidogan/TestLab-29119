@@ -4,6 +4,8 @@ Browser-based educational game for **ISO/IEC 29119-4** test design techniques an
 
 **Live demo:** https://ismaiidogan.github.io/TestLab-29119/
 
+**Documentation (Wiki):** https://github.com/ismaiidogan/TestLab-29119/wiki
+
 **Course deliverables:** [User Manual](docs/USER_MANUAL.md) · [Teaching effectiveness](docs/TEACHING_EFFECTIVENESS.md) · [Submission checklist](docs/SUBMISSION_EMAIL.md)
 
 ## Quick start
