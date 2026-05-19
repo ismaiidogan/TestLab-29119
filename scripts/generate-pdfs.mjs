@@ -27,6 +27,8 @@ const css = `
   th { background: #f0f4f8; }
   code { background: #f4f4f4; padding: 1px 4px; font-size: 10pt; }
   hr { border: none; border-top: 1px solid #ddd; margin: 1.5em 0; }
+  img { max-width: 100%; height: auto; display: block; margin: 0.75em auto; border: 1px solid #ddd; }
+  h3 { page-break-after: avoid; }
 `;
 
 function mdToHtml(md) {
@@ -53,6 +55,19 @@ for (const { md, pdf } of files) {
   const htmlPath = join(docs, pdf.replace('.pdf', '.html'));
   writeFileSync(htmlPath, html, 'utf8');
   await page.goto(`file:///${htmlPath.replace(/\\/g, '/')}`, { waitUntil: 'networkidle' });
+  await page.evaluate(async () => {
+    const imgs = Array.from(document.images);
+    await Promise.all(
+      imgs.map((img) =>
+        img.complete
+          ? Promise.resolve()
+          : new Promise((resolve, reject) => {
+              img.onload = resolve;
+              img.onerror = reject;
+            })
+      )
+    );
+  }).catch(() => {});
   await page.pdf({
     path: pdfPath,
     format: 'A4',

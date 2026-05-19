@@ -1,6 +1,5 @@
 # Submission Checklist — Email to Instructor
 
-**Deadline:** Wednesday, 11:30 AM  
 **Subject:** `SENG 436 — TestLab 29119 — Deliverables — [Your Full Name]`
 
 ---
@@ -16,14 +15,14 @@ https://ismaiidogan.github.io/TestLab-29119/
 
 **2. User Manual**  
 Attached: `USER_MANUAL.pdf`  
-(Also available in the repository: `docs/USER_MANUAL.md`)
+(Also in the repository: `docs/USER_MANUAL.pdf`)
 
 **3. Screenshots (physical game)**  
-Not applicable — TestLab 29119 is a web application. Per your instructions, we provide the public URL above instead of a physical package. An ordered screenshot walkthrough is included in the User Manual, Appendix A (`docs/screenshots/`).
+Not applicable — TestLab 29119 is a web application. We provide the public URL above instead of a physical package. An ordered screenshot walkthrough with embedded images is in the User Manual, Appendix A.
 
 **4. Teaching effectiveness (1 page)**  
 Attached: `TEACHING_EFFECTIVENESS.pdf`  
-(Also available in the repository: `docs/TEACHING_EFFECTIVENESS.md`)
+(Also in the repository: `docs/TEACHING_EFFECTIVENESS.pdf`)
 
 Thank you for your guidance throughout SENG 436.
 
@@ -41,26 +40,16 @@ Best regards,
 
 ## Before sending
 
-- [x] Game URL: https://ismaiidogan.github.io/TestLab-29119/
-- [ ] Confirm the game loads in an incognito browser window
-- [ ] Export PDFs (see below)
+- [ ] Game URL loads in an incognito browser window
+- [ ] PDFs are up to date (`npm run pdf` from the project root)
 - [ ] Add team member names if a group project
 
 ---
 
-## Export Markdown to PDF
-
-**Option A — Browser (no install)**  
-1. Open `docs/USER_MANUAL.md` in VS Code or GitHub preview.  
-2. Print → Save as PDF.
-
-**Option B — Command line**
+## Regenerate PDFs
 
 ```bash
-npx --yes md-to-pdf docs/USER_MANUAL.md docs/TEACHING_EFFECTIVENESS.md
+npm run pdf
 ```
 
 Output: `docs/USER_MANUAL.pdf` and `docs/TEACHING_EFFECTIVENESS.pdf`
-
-**Option C — Word / Google Docs**  
-Paste markdown content → Export as PDF.

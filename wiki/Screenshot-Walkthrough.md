@@ -40,7 +40,7 @@ Drag fifteen technique cards into the three category drop zones.
 
 ## 5. Phase 2 — Scenario with ISO 25010 badge
 
-![Phase 2 scenario](https://raw.githubusercontent.com/ismaiidogan/TestLab-29119/main/docs/screenshots/06-phase2-scenario.png)
+![Phase 2 scenario](https://raw.githubusercontent.com/ismaiidogan/TestLab-29119/main/docs/screenshots/05-phase2-scenario.png)
 
 Nine multiple-choice scenarios; each shows an ISO/IEC 25010 quality characteristic badge.
 

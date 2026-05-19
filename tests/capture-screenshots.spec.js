@@ -35,7 +35,7 @@ test.describe('Capture manual screenshots', () => {
     await page.evaluate(() => showScreen('phase2'));
     await page.evaluate(() => renderPhase2Scenario());
     await page.waitForSelector('#phase2-content .scenario-card');
-    await page.screenshot({ path: path.join(OUT, '06-phase2-scenario.png'), fullPage: true });
+    await page.screenshot({ path: path.join(OUT, '05-phase2-scenario.png'), fullPage: true });
 
     await page.evaluate(() => showScreen('phase3'));
     await page.evaluate(() => renderPhase3Scenario());

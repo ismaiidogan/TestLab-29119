@@ -4,9 +4,14 @@ Browser-based educational game for **ISO/IEC 29119-4** test design techniques an
 
 **Live demo:** https://ismaiidogan.github.io/TestLab-29119/
 
-**Documentation (Wiki):** https://github.com/ismaiidogan/TestLab-29119/wiki
+## Documentation
 
-**Course deliverables:** [User Manual](docs/USER_MANUAL.md) · [Teaching effectiveness](docs/TEACHING_EFFECTIVENESS.md) · [Submission checklist](docs/SUBMISSION_EMAIL.md)
+| Resource | Description |
+|----------|-------------|
+| [GitHub Wiki](https://github.com/ismaiidogan/TestLab-29119/wiki) | Full player guide, standards reference, FAQ |
+| [User Manual (PDF)](docs/USER_MANUAL.pdf) | Course submission — player guide with screenshots |
+| [Teaching effectiveness (PDF)](docs/TEACHING_EFFECTIVENESS.pdf) | One-page pedagogical rationale |
+| [docs/README.md](docs/README.md) | Document index and PDF regeneration |
 
 ## Quick start
 
@@ -54,6 +59,9 @@ Maximum score: **500** points (110 + 195 + 110 + 85).
 |---------|-------------|
 | `npm start` | Serve the app on port 3000 |
 | `npm test` | Run Playwright smoke tests |
+| `npm run pdf` | Regenerate course PDFs from `docs/*.md` |
+| `npm run screenshots` | Capture UI screenshots for the user manual |
+| `npm run wiki` | Publish `wiki/` to GitHub Wiki |
 
 ## Persistence
 

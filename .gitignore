@@ -4,6 +4,10 @@ playwright-report/
 blob-report/
 playwright/.cache/
 
+*.docx
+/TestLab*.pdf
+e2e-dom.cjs
+
 docs/_tmp.md
 docs/_tmp.html
 docs/*.html

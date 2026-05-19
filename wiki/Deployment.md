@@ -44,7 +44,7 @@ Wiki content is maintained in the `wiki/` folder and published with:
 .\scripts\push-wiki.ps1
 ```
 
-See `docs/WIKI.md` in the repository for details.
+See [`scripts/README-wiki.md`](https://github.com/ismaiidogan/TestLab-29119/blob/main/scripts/README-wiki.md) in the repository for details.
 
 Wiki URL: **https://github.com/ismaiidogan/TestLab-29119/wiki**
 

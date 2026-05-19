@@ -37,9 +37,9 @@ The script clones `TestLab-29119.wiki.git`, copies all `wiki/*.md` files, commit
 
 ## Editing tips
 
-- Use relative links: `[Game Phases](Game-Phases)`  
-- Screenshots use `raw.githubusercontent.com` URLs pointing to `docs/screenshots/` on `main`  
-- Keep `Home.md` as the landing page; GitHub uses it as the wiki index  
+- Use absolute wiki URLs in tables: `https://github.com/ismaiidogan/TestLab-29119/wiki/Page-Name`  
+- Or wikilinks outside tables: `[[Page-Name]]`  
+- Screenshots on the wiki use `raw.githubusercontent.com` URLs pointing to `docs/screenshots/` on `main`  
 
 ## Sync with main repo
 

@@ -238,29 +238,61 @@ After Phase 4 you will see:
 
 ## 11. Appendix A — Screenshot Walkthrough
 
-*Item 3 of the course deliverable list applies to physical non-web games. As a web application, TestLab 29119 is accessed via URL; the following ordered screenshots document the user interface.*
+TestLab 29119 is a web application accessed via URL. The following screens document the user interface in play order.
 
-| # | File | Screen |
-|---|------|--------|
-| 1 | `01-welcome.png` | Welcome and player profile |
-| 2 | `02-tutorial-categories.png` | Tutorial — three technique categories |
-| 3 | `03-tutorial-clause4.png` | Tutorial — Clause 4 selection criteria |
-| 4 | `04-phase1-classify.png` | Phase 1 — drag-and-drop classification |
-| 5 | `06-phase2-scenario.png` | Phase 2 — scenario with ISO 25010 badge |
-| 6 | `07-phase3-strategy.png` | Phase 3 — project and technique selection |
-| 7 | `08-phase4-testcases.png` | Phase 4 — EP/BVA test case selection |
-| 8 | `09-results.png` | Results — score and grade breakdown |
-| 9 | `10-glossary.png` | ISO reference glossary panel |
+### 1. Welcome — Player profile
 
-Screenshots are stored in the `docs/screenshots/` folder of the project repository.
+![Welcome screen](screenshots/01-welcome.png)
 
----
+Enter name and school, then **Start Mission**. Profile data appears on the certificate and leaderboard.
 
-## 12. Appendix B — Regenerating Screenshots (developers)
+### 2. Tutorial — Three technique categories
 
-```bash
-npx playwright test tests/capture-screenshots.spec.js
-```
+![Tutorial — three categories](screenshots/02-tutorial-categories.png)
+
+Introduces Specification-Based, Structure-Based, and Experience-Based groups (ISO/IEC 29119-4).
+
+### 3. Tutorial — Clause 4 selection criteria
+
+![Tutorial — Clause 4](screenshots/03-tutorial-clause4.png)
+
+Risk, objectives, test levels, and organizational context—the foundation for Phase 3.
+
+### 4. Phase 1 — Classify
+
+![Phase 1 — classify](screenshots/04-phase1-classify.png)
+
+Drag fifteen technique cards into the three category drop zones.
+
+### 5. Phase 2 — Scenario with ISO 25010 badge
+
+![Phase 2 — scenario](screenshots/05-phase2-scenario.png)
+
+Nine multiple-choice scenarios; each shows an ISO/IEC 25010 quality characteristic badge.
+
+### 6. Phase 3 — Test strategy
+
+![Phase 3 — strategy](screenshots/07-phase3-strategy.png)
+
+Select up to five techniques per project given risk, budget, timeline, team, and documentation constraints.
+
+### 7. Phase 4 — Test case selection
+
+![Phase 4 — test cases](screenshots/08-phase4-testcases.png)
+
+Choose required EP and BVA test cases via checkboxes.
+
+### 8. Results — Score and grade
+
+![Results screen](screenshots/09-results.png)
+
+Total score, grade tier, phase breakdown, misconceptions, and certificate download.
+
+### 9. ISO reference glossary
+
+![Glossary panel](screenshots/10-glossary.png)
+
+Searchable glossary available from the navbar book icon during play.
 
 ---
 

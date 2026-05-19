@@ -41,7 +41,3 @@ The game runs entirely in the browser; the leaderboard is local to each machine 
 ## Conclusion
 
 TestLab 29119 is an effective teaching tool because it transforms ISO/IEC 29119-4 from a document to be memorized into a **practice environment** where learners must classify, apply, strategize, and design under realistic constraints, while ISO/IEC 25010 quality tags show *why* a technique fits a given quality goal. Compared to lecture-only instruction, the game increases engagement, surfaces misconceptions explicitly, and assesses skills that the standards were written to support—making it a defensible learner-as-designer deliverable for software testing education.
-
----
-
-*Approximate length: one page single-spaced (12 pt).*

@@ -62,7 +62,7 @@ Playwright end-to-end tests live in `tests/`:
 - `smoke.spec.js` — welcome, tutorial, glossary  
 - `capture-screenshots.spec.js` — generates `docs/screenshots/`  
 
-Run: `npm test`
+Run: `npm test` · Regenerate screenshots: `npm run screenshots`
 
 ---
 
