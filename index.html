@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TestLab 29119 — An educational game teaching ISO/IEC 29119-4 Test Techniques through interactive classification, application, and strategy challenges.">
+  <title>TestLab 29119 — ISO/IEC 29119-4 Test Techniques Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <span class="logo-icon">🧪</span>
+      <span>TestLab 29119</span>
+    </div>
+    <div class="navbar-stats" style="display: flex; align-items: center;">
+      <div class="nav-leaderboard-container" style="position: relative; margin-right: 15px;">
+        <button id="nav-leaderboard-btn" onclick="toggleNavLeaderboard()" style="background: transparent; border: 1px solid var(--border-color); color: var(--text-color); border-radius: 5px; padding: 4px 8px; cursor: pointer; display: flex; align-items: center; gap: 5px;">🏆 Top 10</button>
+        <div id="nav-leaderboard-dropdown" class="glass-card hidden" style="position: absolute; top: 130%; right: 0; width: 280px; padding: 1rem; z-index: 1000; box-shadow: 0 8px 32px rgba(0,0,0,0.5);">
+          <h4 style="margin-top: 0; margin-bottom: 10px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">🏆 Leaderboard</h4>
+          <div id="nav-leaderboard-list" style="max-height: 250px; overflow-y: auto; font-size: 0.9rem; text-align: left;"></div>
+        </div>
+      </div>
+      <div class="stat-item">
+        <span>Best:</span>
+        <span class="stat-value" id="best-value">—</span>
+      </div>
+      <div class="stat-item">
+        <span>Score:</span>
+        <span class="stat-value" id="score-value">0</span>
+      </div>
+      <button class="theme-toggle-btn" id="ref-panel-btn" onclick="toggleReferencePanel()" title="ISO Reference Glossary">📖</button>
+      <button class="theme-toggle-btn" id="theme-toggle-btn" onclick="toggleTheme()" title="Toggle theme">☀️</button>
+      <button class="mute-btn" id="mute-btn" onclick="toggleMute()" title="Toggle sound">🔊</button>
+    </div>
+  </nav>
+
+  <!-- Score Popup -->
+  <div id="score-popup" class="score-popup"></div>
+
+  <!-- ==================== PHASE PROGRESS ==================== -->
+  <div class="phase-progress">
+    <div class="phase-step">
+      <div class="phase-dot" data-phase="1">
+        1
+        <span class="phase-label">Classify</span>
+      </div>
+    </div>
+    <div class="phase-connector"></div>
+    <div class="phase-step">
+      <div class="phase-dot" data-phase="2">
+        2
+        <span class="phase-label">Apply</span>
+      </div>
+    </div>
+    <div class="phase-connector"></div>
+    <div class="phase-step">
+      <div class="phase-dot" data-phase="3">
+        3
+        <span class="phase-label">Strategize</span>
+      </div>
+    </div>
+    <div class="phase-connector"></div>
+    <div class="phase-step">
+      <div class="phase-dot" data-phase="4">
+        4
+        <span class="phase-label">Test Cases</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== WELCOME SCREEN ==================== -->
+  <div class="screen" id="welcome">
+    <div class="welcome-screen">
+      <div class="welcome-badge">ISO/IEC 29119-4 · Test Techniques</div>
+      <h1 class="welcome-title">TestLab 29119</h1>
+      <p class="welcome-subtitle">
+        Step into the role of a Test Manager. Master the art of selecting and applying the right test techniques for every project.
+      </p>
+      
+      <div class="user-info-form glass-card" style="margin: 20px auto; display: flex; flex-direction: column; gap: 15px; align-items: center; padding: 25px; border-radius: 12px; max-width: 400px; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.1); background: rgba(255, 255, 255, 0.03);">
+        <h3 style="margin-bottom: 5px; font-size: 1.2rem; font-weight: 600;">Player Profile</h3>
+        <input type="text" id="player-name" placeholder="👤 Your Name" class="form-input" style="padding: 12px 15px; border-radius: 8px; border: 2px solid var(--cyan); width: 100%; font-size: 1.1rem; background: var(--bg-color); color: var(--text-color); outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--cyan)'">
+        <input type="text" id="player-school" placeholder="🏫 School Name" class="form-input" style="padding: 12px 15px; border-radius: 8px; border: 2px solid var(--cyan); width: 100%; font-size: 1.1rem; background: var(--bg-color); color: var(--text-color); outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--cyan)'">
+      </div>
+
+      <button class="btn btn-primary btn-lg" onclick="startGame()" style="margin-top: 10px;">
+        🚀 Start Mission
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== TUTORIAL SCREEN ==================== -->
+  <div class="screen hidden" id="tutorial">
+    <div class="tutorial-container glass-card">
+      <div class="tutorial-icon" id="tutorial-icon">🧪</div>
+      <h2 class="tutorial-title" id="tutorial-title"></h2>
+      <div class="tutorial-content" id="tutorial-content"></div>
+      <div class="tutorial-nav">
+        <button class="btn btn-outline" id="btn-prev-slide" onclick="prevSlide()">← Back</button>
+        <div class="slide-dots" id="slide-dots"></div>
+        <button class="btn btn-primary" id="btn-next-slide" onclick="nextSlide()">Next →</button>
+        <button class="btn btn-outline" style="margin-left: 10px;" onclick="skipTutorial()">Skip ⏭️</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PHASE 1: CLASSIFY ==================== -->
+  <div class="screen hidden" id="phase1">
+    <div class="phase-header">
+      <span class="phase-tag p1">Phase 1</span>
+      <h2 class="phase-title">Classify the Techniques</h2>
+      <p class="phase-desc">
+        Drag each test technique card to its correct category.
+        <strong id="phase1-counter">0 / 15</strong> placed
+      </p>
+    </div>
+
+    <div class="classify-layout">
+      <div class="card-pool" id="card-pool"></div>
+
+      <div class="drop-zones">
+        <div class="drop-zone spec-zone" data-category="specification-based">
+          <div class="zone-header">📘 Specification-Based</div>
+          <div class="zone-cards"></div>
+        </div>
+        <div class="drop-zone struct-zone" data-category="structure-based">
+          <div class="zone-header">📗 Structure-Based</div>
+          <div class="zone-cards"></div>
+        </div>
+        <div class="drop-zone exp-zone" data-category="experience-based">
+          <div class="zone-header">📕 Experience-Based</div>
+          <div class="zone-cards"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:1.5rem;">
+      <div id="phase1-result"></div>
+      <button class="btn btn-success btn-lg hidden" id="phase1-check-btn" onclick="checkPhase1()">
+        ✅ Check Answers
+      </button>
+      <button class="btn btn-primary btn-lg hidden" id="phase1-next-btn" onclick="goToPhase2()">
+        Continue to Phase 2 →
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== PHASE 2: APPLY ==================== -->
+  <div class="screen hidden" id="phase2">
+    <div class="phase-header">
+      <span class="phase-tag p2">Phase 2</span>
+      <h2 class="phase-title">Apply to Scenarios</h2>
+      <p class="phase-desc">
+        Choose the correct test technique for each real-world scenario.
+        Scenario <strong id="phase2-progress">1 / 9</strong>
+      </p>
+    </div>
+    <div id="phase2-content"></div>
+  </div>
+
+  <!-- ==================== PHASE 3: STRATEGIZE ==================== -->
+  <div class="screen hidden" id="phase3">
+    <div class="phase-header">
+      <span class="phase-tag p3">Phase 3</span>
+      <h2 class="phase-title">Build Your Test Strategy</h2>
+      <p class="phase-desc">
+        Given a project with real constraints, select the optimal technique mix.
+        Project <strong id="phase3-progress">1 / 3</strong>
+      </p>
+    </div>
+    <div id="phase3-content"></div>
+  </div>
+
+  <!-- ==================== PHASE 4: TEST CASES ==================== -->
+  <div class="screen hidden" id="phase4">
+    <div class="phase-header">
+      <span class="phase-tag p4">Phase 4</span>
+      <h2 class="phase-title">Write Your Test Cases</h2>
+      <p class="phase-desc">
+        Select every test case you would include for the given scenario.
+        Exercise <strong id="phase4-progress">1 / 2</strong>
+      </p>
+    </div>
+    <div id="phase4-content"></div>
+  </div>
+
+  <!-- ==================== RESULTS SCREEN ==================== -->
+  <div class="screen hidden" id="results">
+    <div class="results-screen">
+      <div class="results-emoji" id="result-emoji">🏆</div>
+      <h2 class="results-title" id="result-title">ISO Master</h2>
+      <div class="results-label" id="result-label">0 / 500 points (0%)</div>
+
+      <div class="total-score-bar">
+        <div class="total-score-fill" id="total-score-fill" style="width:0%"></div>
+      </div>
+
+      <div class="score-breakdown">
+        <div class="score-row">
+          <span class="score-phase">🔵 Phase 1 — Classify</span>
+          <span class="score-val" id="score-p1">0</span>
+        </div>
+        <div class="score-row">
+          <span class="score-phase">🟢 Phase 2 — Apply</span>
+          <span class="score-val" id="score-p2">0</span>
+        </div>
+        <div class="score-row">
+          <span class="score-phase">🟠 Phase 3 — Strategize</span>
+          <span class="score-val" id="score-p3">0</span>
+        </div>
+        <div class="score-row">
+          <span class="score-phase">🟣 Phase 4 — Test Cases</span>
+          <span class="score-val" id="score-p4">0</span>
+        </div>
+      </div>
+
+      <p class="results-message" id="result-message"></p>
+
+      <div id="hints-summary" class="hidden" style="margin-top:1.5rem"></div>
+
+      <div class="misconceptions-summary">
+        <h3>📌 Misconceptions Encountered</h3>
+        <div id="misconceptions-list"></div>
+      </div>
+
+      <div class="insights-summary hidden" id="phase3-insights-container" style="margin-top:1.5rem">
+        <h3>💡 Phase 3 Strategy Insights</h3>
+        <div id="phase3-insights-list"></div>
+      </div>
+
+      <div class="results-actions" style="margin-top:2rem">
+        <button class="btn btn-primary btn-lg" onclick="restartGame()">🔄 Play Again</button>
+      </div>
+
+      <div class="leaderboard-section glass-card" style="margin-top: 2rem; padding: 1.5rem; text-align: left;">
+        <h3 style="text-align: center; margin-bottom: 1rem;">🏆 Leaderboard</h3>
+        <div id="leaderboard-list" style="max-height: 200px; overflow-y: auto;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TECH MODAL ==================== -->
+  <div id="modal-overlay" class="modal-overlay hidden" onclick="closeTechModal()"></div>
+  <div id="tech-modal" class="tech-modal hidden">
+    <button class="modal-close" onclick="closeTechModal()">✕</button>
+    <div class="modal-category" id="modal-category"></div>
+    <div class="modal-clause" id="modal-clause"></div>
+    <h3 class="modal-title" id="modal-title"></h3>
+    <p class="modal-desc" id="modal-desc"></p>
+    <div class="modal-grid">
+      <div class="modal-info-box">
+        <div class="modal-info-label">✅ Best for</div>
+        <div class="modal-info-val" id="modal-best"></div>
+      </div>
+      <div class="modal-info-box">
+        <div class="modal-info-label">⚡ Pair with</div>
+        <div class="modal-info-val" id="modal-pair"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== REFERENCE PANEL ==================== -->
+  <div id="reference-panel" class="reference-panel hidden">
+    <div class="ref-panel-header">
+      <span>📖 ISO Reference</span>
+      <button class="ref-close-btn" onclick="toggleReferencePanel()">✕</button>
+    </div>
+    <input
+      id="ref-search"
+      type="text"
+      class="ref-search-input"
+      placeholder="Search techniques & terms..."
+      oninput="filterReference(this.value)"
+    >
+    <div id="ref-list" class="ref-list"></div>
+  </div>
+  <div id="ref-overlay" class="ref-overlay hidden" onclick="toggleReferencePanel()"></div>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

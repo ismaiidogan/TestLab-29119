@@ -1,0 +1,10 @@
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+docs/_tmp.md
+docs/_tmp.html
+docs/*.html
+!docs/screenshots/

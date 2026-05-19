@@ -1,0 +1,18 @@
+{
+  "name": "testlab-game",
+  "version": "1.0.0",
+  "description": "Educational game for ISO/IEC 29119-4 test design techniques",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve . -p 3000",
+    "test": "playwright test",
+    "screenshots": "playwright test tests/capture-screenshots.spec.js",
+    "pdf": "node scripts/generate-pdfs.mjs"
+  },
+  "keywords": ["iso-29119", "testing", "education"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1"
+  }
+}
