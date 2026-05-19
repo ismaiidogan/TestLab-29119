@@ -12,7 +12,7 @@ Dear Professor,
 Please find below our deliverables for the TestLab 29119 educational game (ISO/IEC 29119-4 and ISO/IEC 25010).
 
 **1. Game URL (web-based)**  
-https://ismaiidogan.github.io/testlab-game/
+https://ismaiidogan.github.io/TestLab-29119/
 
 **2. User Manual**  
 Attached: `USER_MANUAL.pdf`  
@@ -41,7 +41,7 @@ Best regards,
 
 ## Before sending
 
-- [x] Game URL: https://ismaiidogan.github.io/testlab-game/
+- [x] Game URL: https://ismaiidogan.github.io/TestLab-29119/
 - [ ] Confirm the game loads in an incognito browser window
 - [ ] Export PDFs (see below)
 - [ ] Add team member names if a group project

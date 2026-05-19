@@ -17,7 +17,7 @@ git init
 git add .
 git commit -m "TestLab 29119 — SENG 436 deliverables"
 git branch -M main
-git remote add origin https://github.com/ismaiidogan/testlab-game.git
+git remote add origin https://github.com/ismaiidogan/TestLab-29119.git
 git push -u origin main
 ```
 
@@ -32,7 +32,7 @@ Alternatively: Source = **Deploy from branch** → `main` → `/ (root)`.
 ## 4. Your game URL
 
 ```
-https://ismaiidogan.github.io/testlab-game/
+https://ismaiidogan.github.io/TestLab-29119/
 ```
 
 Open in an incognito window and play through Welcome → 4 phases → Results.

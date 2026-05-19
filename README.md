@@ -2,7 +2,7 @@
 
 Browser-based educational game for **ISO/IEC 29119-4** test design techniques and **ISO/IEC 25010** quality characteristics. No build step or backend required.
 
-**Live demo:** https://ismaiidogan.github.io/testlab-game/
+**Live demo:** https://ismaiidogan.github.io/TestLab-29119/
 
 **Course deliverables:** [User Manual](docs/USER_MANUAL.md) · [Teaching effectiveness](docs/TEACHING_EFFECTIVENESS.md) · [Submission checklist](docs/SUBMISSION_EMAIL.md)
 

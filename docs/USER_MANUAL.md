@@ -29,7 +29,7 @@
 
 ### Online (recommended for submission)
 
-**Live URL:** https://ismaiidogan.github.io/testlab-game/
+**Live URL:** https://ismaiidogan.github.io/TestLab-29119/
 
 ### Local (development or offline demo)
 
