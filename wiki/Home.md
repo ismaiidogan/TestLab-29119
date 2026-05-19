@@ -22,9 +22,9 @@ The game runs entirely in the browser. No installation is required for players.
 
 | Audience | What you will find here |
 |----------|-------------------------|
-| **Students** | [Getting Started](Getting-Started), [Game Phases](Game-Phases), [Scoring](Scoring-and-Certification), [FAQ](FAQ) |
-| **Instructors** | [Pedagogy](Pedagogy), [ISO Standards Alignment](ISO-Standards-Alignment), [Screenshot Walkthrough](Screenshot-Walkthrough) |
-| **Developers** | [For Developers](For-Developers), [Deployment](Deployment), source code in the main repository |
+| **Students** | [[Getting-Started|Getting Started]], [[Game-Phases|Game Phases]], [[Scoring-and-Certification|Scoring]], [[FAQ]] |
+| **Instructors** | [[Pedagogy]], [[ISO-Standards-Alignment|ISO Standards Alignment]], [[Screenshot-Walkthrough|Screenshot Walkthrough]] |
+| **Developers** | [[For-Developers|For Developers]], [[Deployment]], source code in the main repository |
 
 ---
 
@@ -32,16 +32,16 @@ The game runs entirely in the browser. No installation is required for players.
 
 | Topic | Page |
 |-------|------|
-| First-time setup and tutorial | [Getting Started](Getting-Started) |
-| All four game phases in detail | [Game Phases](Game-Phases) |
-| Points, grades, and certificate | [Scoring and Certification](Scoring-and-Certification) |
-| ISO 29119-4 and 25010 mapping | [ISO Standards Alignment](ISO-Standards-Alignment) |
-| Full technique catalog (15 techniques) | [Technique Reference](Technique-Reference) |
-| Why the game teaches effectively | [Pedagogy](Pedagogy) |
-| Architecture and local development | [For Developers](For-Developers) |
-| GitHub Pages hosting | [Deployment](Deployment) |
-| UI screenshots in order | [Screenshot Walkthrough](Screenshot-Walkthrough) |
-| Common questions | [FAQ](FAQ) |
+| First-time setup and tutorial | [[Getting-Started|Getting Started]] |
+| All four game phases in detail | [[Game-Phases|Game Phases]] |
+| Points, grades, and certificate | [[Scoring-and-Certification|Scoring and Certification]] |
+| ISO 29119-4 and 25010 mapping | [[ISO-Standards-Alignment|ISO Standards Alignment]] |
+| Full technique catalog (15 techniques) | [[Technique-Reference|Technique Reference]] |
+| Why the game teaches effectively | [[Pedagogy]] |
+| Architecture and local development | [[For-Developers|For Developers]] |
+| GitHub Pages hosting | [[Deployment]] |
+| UI screenshots in order | [[Screenshot-Walkthrough|Screenshot Walkthrough]] |
+| Common questions | [[FAQ]] |
 
 ---
 
