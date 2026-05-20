@@ -11,7 +11,15 @@ Browser-based educational game for **ISO/IEC 29119-4** test design techniques an
 | [GitHub Wiki](https://github.com/ismaiidogan/TestLab-29119/wiki) | Full player guide, standards reference, FAQ |
 | [User Manual (PDF)](docs/USER_MANUAL.pdf) | Course submission — player guide with screenshots |
 | [Teaching effectiveness (PDF)](docs/TEACHING_EFFECTIVENESS.pdf) | One-page pedagogical rationale |
-| [docs/README.md](docs/README.md) | Document index and PDF regeneration |
+
+**`docs/` folder (course deliverables):**
+
+| File | Purpose |
+|------|---------|
+| `USER_MANUAL.pdf` / `.md` | Player guide (regenerate PDF: `npm run pdf`) |
+| `TEACHING_EFFECTIVENESS.pdf` / `.md` | Pedagogical rationale |
+| `screenshots/` | UI images for the user manual |
+| `internal/SUBMISSION_EMAIL.md` | Student email template (not part of public deliverables) |
 
 ## Quick start
 
