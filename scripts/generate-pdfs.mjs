@@ -27,8 +27,18 @@ const css = `
   th { background: #f0f4f8; }
   code { background: #f4f4f4; padding: 1px 4px; font-size: 10pt; }
   hr { border: none; border-top: 1px solid #ddd; margin: 1.5em 0; }
-  img { max-width: 100%; height: auto; display: block; margin: 0.75em auto; border: 1px solid #ddd; }
-  h3 { page-break-after: avoid; }
+  img {
+    width: 100%;
+    max-width: 16.5cm;
+    height: auto;
+    display: block;
+    margin: 0.75em auto;
+    border: 1px solid #bbb;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  h3 { page-break-after: avoid; break-after: avoid; }
+  figure, h3 + p + img, h3 + img { page-break-inside: avoid; }
 `;
 
 function mdToHtml(md) {
