@@ -12,14 +12,7 @@ Browser-based educational game for **ISO/IEC 29119-4** test design techniques an
 | [User Manual (PDF)](docs/USER_MANUAL.pdf) | Course submission — player guide with screenshots |
 | [Teaching effectiveness (PDF)](docs/TEACHING_EFFECTIVENESS.pdf) | One-page pedagogical rationale |
 
-**`docs/` folder (course deliverables):**
-
-| File | Purpose |
-|------|---------|
-| `USER_MANUAL.pdf` / `.md` | Player guide (regenerate PDF: `npm run pdf`) |
-| `TEACHING_EFFECTIVENESS.pdf` / `.md` | Pedagogical rationale |
-| `screenshots/` | UI images for the user manual |
-| `internal/SUBMISSION_EMAIL.md` | Student email template (not part of public deliverables) |
+**`docs/` folder:** `USER_MANUAL.pdf`, `TEACHING_EFFECTIVENESS.pdf`, and `screenshots/` (figures embedded in the user manual).
 
 ## Quick start
 
@@ -66,10 +59,7 @@ Maximum score: **500** points (110 + 195 + 110 + 85).
 | Command | Description |
 |---------|-------------|
 | `npm start` | Serve the app on port 3000 |
-| `npm test` | Run Playwright smoke tests |
-| `npm run pdf` | Regenerate course PDFs from `docs/*.md` |
-| `npm run screenshots` | Capture UI screenshots for the user manual |
-| `npm run wiki` | Publish `wiki/` to GitHub Wiki |
+| `npm test` | Run Playwright smoke tests (optional; requires `npm install`) |
 
 ## Persistence
 

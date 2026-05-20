@@ -12,3 +12,6 @@ docs/_tmp.md
 docs/_tmp.html
 docs/*.html
 !docs/screenshots/
+docs/*.pdf
+!docs/USER_MANUAL.pdf
+!docs/TEACHING_EFFECTIVENESS.pdf

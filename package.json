@@ -5,10 +5,7 @@
   "private": true,
   "scripts": {
     "start": "npx --yes serve . -p 3000",
-    "test": "playwright test",
-    "screenshots": "playwright test tests/capture-screenshots.spec.js",
-    "pdf": "node scripts/generate-pdfs.mjs",
-    "wiki": "powershell -ExecutionPolicy Bypass -File scripts/push-wiki.ps1"
+    "test": "playwright test"
   },
   "keywords": ["iso-29119", "testing", "education"],
   "author": "",

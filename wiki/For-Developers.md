@@ -49,9 +49,6 @@ Open `http://localhost:3000`.
 |--------|---------|---------|
 | `start` | `npx serve . -p 3000` | Local static server |
 | `test` | `playwright test` | Smoke + screenshot tests |
-| `screenshots` | `playwright test tests/capture-screenshots.spec.js` | Regenerate manual appendix images |
-| `pdf` | `node scripts/generate-pdfs.mjs` | Export docs to PDF |
-| `wiki` | `.\scripts\push-wiki.ps1` | Publish wiki (see [Deployment](Deployment)) |
 
 ---
 
@@ -60,9 +57,8 @@ Open `http://localhost:3000`.
 Playwright end-to-end tests live in `tests/`:
 
 - `smoke.spec.js` — welcome, tutorial, glossary  
-- `capture-screenshots.spec.js` — generates `docs/screenshots/`  
 
-Run: `npm test` · Regenerate screenshots: `npm run screenshots`
+Run: `npm test`
 
 ---
 

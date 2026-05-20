@@ -78,16 +78,6 @@ Searchable glossary available from the navbar book icon during play.
 
 ---
 
-## Regenerating screenshots
-
-Developers can regenerate these images:
-
-```bash
-npm run screenshots
-```
-
----
-
 ## Related pages
 
 - [Getting Started](Getting-Started)  

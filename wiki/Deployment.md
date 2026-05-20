@@ -36,17 +36,11 @@ Wait for the **Deploy to GitHub Pages** action to finish (Actions tab).
 
 ---
 
-## Publishing the Wiki
+## Wiki
 
-Wiki content is maintained in the `wiki/` folder and published with:
+Extended documentation: **https://github.com/ismaiidogan/TestLab-29119/wiki**
 
-```powershell
-.\scripts\push-wiki.ps1
-```
-
-See [`scripts/README-wiki.md`](https://github.com/ismaiidogan/TestLab-29119/blob/main/scripts/README-wiki.md) in the repository for details.
-
-Wiki URL: **https://github.com/ismaiidogan/TestLab-29119/wiki**
+Wiki pages can be edited on GitHub under the repository **Wiki** tab.
 
 ---
 
