@@ -27,11 +27,11 @@
 
 ## 3. How to Access the Game
 
-### Online (recommended for submission)
+### Online
 
 **Live URL:** https://ismaiidogan.github.io/TestLab-29119/
 
-### Local (development or offline demo)
+### Local
 
 ```bash
 npm install
@@ -293,7 +293,3 @@ Total score, grade tier, phase breakdown, misconceptions, and certificate downlo
 ![Glossary panel](screenshots/10-glossary.png)
 
 Searchable glossary available from the navbar book icon during play.
-
----
-
-*End of User Manual*
